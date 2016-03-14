@@ -1,17 +1,17 @@
 var CLASSES = {
-    note:'info',
+    info:'info',
     tip:'success',
-    warning:'danger',
+    danger:'danger',
     working:'warning'
 };
 
 function makeIcon(name) {
-    return '<i class="octicon octicon-'+name+'"></i>';
+    return '<i class="octicon octicon-'+name+'" style=""></i>';
 }
 var ICONS = {
-    note: '',
+    info: '',
     tip: makeIcon('mortar-board'), // Diploma hat
-    warning: makeIcon('issue-opened'),
+    danger: makeIcon('issue-opened'),
     working: makeIcon('tools')
 };
 
@@ -19,8 +19,9 @@ module.exports = {
     blocks: {
         hint: {
             process: function (block) {
-                // Available styles: note, warning, tip, working
-                var style = block.kwargs.style || 'note';
+                // Available styles: info, danger, tip, working
+                var style = block.kwargs.style || 'info';
+
                 return '<div class="alert alert-'+CLASSES[style]+'">'
                     + ICONS[style]
                     + block.body
