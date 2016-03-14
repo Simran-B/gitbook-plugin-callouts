@@ -1,7 +1,7 @@
 Styled hint blocks in your docs
 ==============
 
-This plugins requires gitbook `>=1.0.0`.
+This plugins requires gitbook `>=2.0.0`.
 
 ### Install
 
