@@ -9,7 +9,7 @@ Add the below to your `book.json` file, then run `gitbook install` :
 
 ```json
 {
-    "plugins": ["plugin-doc-hints"]
+    "plugins": ["plugin-hints"]
 }
 ```
 
