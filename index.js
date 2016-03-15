@@ -9,7 +9,7 @@ function makeIcon(name) {
     return '<i class="octicon octicon-'+name+'" style=""></i>';
 }
 var ICONS = {
-    info: '',
+    info: makeIcon('info'),
     tip: makeIcon('mortar-board'), // Diploma hat
     danger: makeIcon('issue-opened'),
     working: makeIcon('tools')
