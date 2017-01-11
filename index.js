@@ -15,10 +15,12 @@ module.exports = {
             process: function (block) {
                 var type = types[block.args[0]] || types['info'];
 
-                return '<div class="alert '+type[0]+'">'
-                    + type[1]
-                    + this.renderInline('markdown', block.body)
-                    + '</div>';
+                return this.renderInline('markdown', block.body).then(function (html) {
+                    return '<div class="alert '+type[0]+'">'
+                        + type[1]
+                        + html
+                        + '</div>';
+                });
             }
         }
     }
