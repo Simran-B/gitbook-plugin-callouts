@@ -1,7 +1,7 @@
-Styled hint blocks in your docs
-==============
+Styled hints for your docs
+==========================
 
-This plugins requires gitbook `>=2.0.0`.
+This plugins requires gitbook `>=3.0.0`.
 
 ### Install
 
@@ -9,30 +9,32 @@ Add the below to your `book.json` file, then run `gitbook install` :
 
 ```json
 {
-    "plugins": ["plugin-hints"]
+    "plugins": ["plugin-callouts"]
 }
 ```
 
 ### Usage
 
-You can now provide hints in various ways using the `hint` tag.
+You can now provide callouts in various ways using the `hint` tag.
 
 ```markdown
-{% hint style='info' %}
-Important info: this note needs to be highlighted
+{% hint 'info' %}
+**Important info**: this *note* needs to be highlighted
 {% endhint %}
 ```
 The above example will produce a `div` with the appropriate style:
 
-``` html
+```html
 <div class="alert alert-info">
-Important info: this note needs to be highlighted
+<i class="fa fa-info-circle" style=""></i>
+<strong>Important info</strong>: this <em>note</em> needs to be highlighted
 </div>
 ```
 
 Available styles are:
 
+- `note`
 - `info` (default)
 - `tip`
+- `warning`
 - `danger`
-- `working`

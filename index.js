@@ -1,30 +1,23 @@
-var CLASSES = {
-    info:'info',
-    tip:'success',
-    danger:'danger',
-    working:'warning'
-};
-
 function makeIcon(name) {
-    return '<i class="octicon octicon-'+name+'" style=""></i>';
+    return '<i class="fa fa-'+name+'" style=""></i>';
 }
-var ICONS = {
-    info: makeIcon('info'),
-    tip: makeIcon('mortar-board'), // Diploma hat
-    danger: makeIcon('issue-opened'),
-    working: makeIcon('tools')
+var types = {
+    note: ['', makeIcon('comment')],
+    info: ['alert-info', makeIcon('info-circle')],
+    tip: ['alert-success', makeIcon('check')],
+    warning: ['alert-warning', makeIcon('exclamation-triangle')],
+    danger: ['alert-danger', makeIcon('times-circle')]
 };
 
 module.exports = {
     blocks: {
         hint: {
             process: function (block) {
-                // Available styles: info, danger, tip, working
-                var style = block.kwargs.style || 'info';
+                var type = types[block.args[0]] || types['info'];
 
-                return '<div class="alert alert-'+CLASSES[style]+'">'
-                    + ICONS[style]
-                    + block.body
+                return '<div class="alert '+type[0]+'">'
+                    + type[1]
+                    + this.renderInline(block.body)
                     + '</div>';
             }
         }
