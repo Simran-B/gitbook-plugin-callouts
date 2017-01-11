@@ -1,5 +1,5 @@
 function makeIcon(name) {
-    return '<i class="fa fa-'+name+'" style=""></i>';
+    return '<i class="fa fa-'+name+'" style="float: left; padding: 5px"></i>';
 }
 var types = {
     note: ['', makeIcon('comment')],
@@ -18,7 +18,7 @@ module.exports = {
                 return this.renderInline('markdown', block.body).then(function (html) {
                     return '<div class="alert '+type[0]+'">'
                         + type[1]
-                        + html
+                        + '<div style="margin-left: 32px">' + html + '</div>'
                         + '</div>';
                 });
             }

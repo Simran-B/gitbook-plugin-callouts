@@ -26,8 +26,8 @@ The above example will produce a `div` with the appropriate style:
 
 ```html
 <div class="alert alert-info">
-<i class="fa fa-info-circle" style=""></i>
-<strong>Important info</strong>: this <em>note</em> needs to be highlighted
+<i class="fa fa-info-circle"></i>
+<div><strong>Important info</strong>: this <em>note</em> needs to be highlighted</div>
 </div>
 ```
 
