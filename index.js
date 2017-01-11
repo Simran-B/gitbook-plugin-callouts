@@ -17,7 +17,7 @@ module.exports = {
 
                 return '<div class="alert '+type[0]+'">'
                     + type[1]
-                    + this.renderInline(block.body)
+                    + this.renderInline('markdown', block.body)
                     + '</div>';
             }
         }
