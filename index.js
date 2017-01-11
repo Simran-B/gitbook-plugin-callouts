@@ -2,7 +2,8 @@ function makeIcon(name) {
     return '<i class="fa fa-'+name+'" style="float: left; padding: 5px"></i>';
 }
 var types = {
-    note: ['', makeIcon('comment')],
+    note: ['', makeIcon('comment-o')],
+    quote: ['', makeIcon('quote-left')],
     info: ['alert-info', makeIcon('info-circle')],
     tip: ['alert-success', makeIcon('check')],
     warning: ['alert-warning', makeIcon('exclamation-triangle')],

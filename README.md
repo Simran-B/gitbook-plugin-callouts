@@ -34,6 +34,7 @@ The above example will produce a `div` with the appropriate style:
 Available styles are:
 
 - `note`
+- `quote`
 - `info` (default)
 - `tip`
 - `warning`
