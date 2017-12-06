@@ -19,7 +19,7 @@ module.exports = {
                 return this.renderBlock('markdown', block.body).then(function (html) {
                     return '<div class="alert '+type[0]+'">'
                         + type[1]
-                        + '<div style="margin-left: 32px">BLOCK MODE ' + html + '</div>'
+                        + '<div style="margin-left: 32px">' + html + '</div>'
                         + '</div>';
                 });
             }
