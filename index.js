@@ -17,7 +17,7 @@ module.exports = {
                 var type = types[block.args[0]] || types['info'];
 
                 return this.renderBlock('markdown', block.body).then(function (html) {
-                    return '<div class="alert '+type[0]+'">'
+                    return '<div class="alert '+type[0]+'" style="display: table">'
                         + type[1]
                         + '<div style="margin-left: 32px">' + html + '</div>'
                         + '</div>';
