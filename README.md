@@ -45,3 +45,7 @@ Available styles are:
 - `tip`
 - `warning`
 - `danger`
+
+Preview:
+
+![Screenshot of different callout types](https://raw.githubusercontent.com/Simran-B/gitbook-plugin-callouts/preview/preview.png)
