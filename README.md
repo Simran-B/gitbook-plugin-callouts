@@ -5,7 +5,7 @@ This plugins requires gitbook `>=3.0.0`.
 
 ### Install
 
-Add the below to your `book.json` file, then run `gitbook install` :
+Add the below to your `book.json` file, then run `gitbook install`:
 
 ```json
 {
@@ -15,7 +15,7 @@ Add the below to your `book.json` file, then run `gitbook install` :
 
 ### Usage
 
-You can now provide callouts in various ways using the `hint` tag.
+Various types of callouts can be embedded using a `hint` block.
 
 ```markdown
 {% hint 'info' %}
@@ -37,7 +37,7 @@ The above example will produce a `div` with the appropriate style:
 </div>
 ```
 
-Available styles are:
+Available styles:
 
 - `note`
 - `quote`
