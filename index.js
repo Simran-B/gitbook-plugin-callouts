@@ -15,7 +15,7 @@ module.exports = {
         hint: {
             process: function (block) {
                 var type = types[block.args[0]] || types['info'];
-                var firstLineIndent = block.body.match(/^[ ]*/)[0].length;
+                var firstLineIndent = block.body.match(/^\n?([ ]*)/)[1].length;
                 var unindentRegex = new RegExp('^[ ]{0,' + firstLineIndent + '}', 'mg');
                 var body = block.body.replace(unindentRegex, '');
 
